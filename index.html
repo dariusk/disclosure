@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>A Note on Disclosure</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+      h1 {
+        font-size: 60px;
+      }
+      .item {
+        height: 500px;
+      }
+      .img {
+        float:left;
+        margin-right:30px;
+        max-width: 50%;
+      }
+      .carousel-control {
+        top: 100%;
+      }
+      .header {
+        background: rgb(145, 145, 201);
+        color: white;
+        padding: 20px;
+      }
+      .related img {
+        max-width: 60%;
+        margin: 5%;
+      }
+      .thecontent {
+        border-right: 1px solid rgba(0, 0, 0, 0.33);
+        padding: 2%;
+      }
+      .sidebar {
+        padding: 2%;
+      }
+      .text {
+        font-size: 17px;
+        line-height: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row-fluid header">
+        <div class="span12">
+          <div id="logo"><h1>Terrible Magazine</h1></div>
+          <div id="subheader">Tech | Business | Markets | Economy</div>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="span9 thecontent">
+          <h2>A Note on <span class="dd">Disclosure</span></h2>
+          <h6>Terrible Magazine Editorial Staff <small>Jan 16, 2015</small></h6>
+          <hr/>
+          <p>As journalists we believe that we owe our readers transparency. A number of our readers recently brought to our attention that we don't have an official <span class="d">Disclosure Policy</span> in place.</p>
+          <blockquote>Our official <span class="d">Disclosure Policy</span> is that we will disclose all relevant information with regards to any <span class="db">article</span> we publish hereforth.</blockquote>
+          <p>Unfortunately, this editorial staff consists solely of journalists who have a vested interest in the content of their <span class="da">disclosure policy</span>. This means our <span class="d">Disclosure Policy</span> is incomplete, and to remedy this we have written a <a href="#" class="d2" onclick="more()">Disclosure Disclosure Policy</a>, where you can read about our policy regarding disclosures of matters related to <span class="dc">disclosure</span>.</p>
+          <p>&mdash;<span class="n">Jim Johnson</span>, <span class="o">Ombudsperson</span></p>
+        </div>
+        <div class="span3 sidebar">
+          <h4>Related Articles</h4>
+          <div class="related">
+              <img src="img/ces.jpg">
+              <p>Charlie Hebdo or CES?</p>
+          </div>
+          <div class="related">
+              <img src="img/person.jpg">
+              <p>Ten NSA Backdoors That Make Great Gifts</p>
+          </div>
+          <div class="related">
+              <img src="img/man.jpg">
+              <p>Say Hi to Our New White, Male Contributor</p>
+          </div>
+
+          <!--Body content-->
+        </div>
+      </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/firstnames.js"></script>
+    <script src="js/lastnames.js"></script>
+    <script type="text/javascript">
+    function more() {
+      var text = $('.d')[0].innerText;
+      var text2 = $('.d2')[0].innerText;
+      var texta = $('.da')[0].innerText;
+      var textb = $('.db')[0].innerText;
+      var textc = $('.dc')[0].innerText;
+      var textd = $('.dd')[0].innerText;
+      var texto = $('.o')[0].innerText;
+      var name = $('.n')[0].innerText;
+      if (textb === 'article') {
+        $('.db').text('disclosure');
+      }
+      else {
+        $('.db').text('disclosure ' + textb);
+      }
+      $('.d').text('Disclosure ' + text);
+      $('.d2').text('Disclosure ' + text2);
+      $('.da').text('disclosure ' + texta);
+      $('.dc').text('disclosure ' + textc);
+      $('.dd').text('Disclosure ' + textd);
+      $('.n').text(first[Math.floor(Math.random()*first.length)] + ' ' + last[Math.floor(Math.random()*last.length)]);
+      $('.o').text('Ombudsperson ' + texto + ' (' + name + ' monitored by ' + $('.n').text() + ')');
+      $('title').text($('title').text()+' Disclosure');
+    }
+    </script>
+   <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    try {
+      var pageTracker = _gat._getTracker("UA-339043-1");
+      pageTracker._trackPageview();
+    } catch(err) {}
+    </script>
+  </body>
+</html>
