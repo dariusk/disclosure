@@ -93,14 +93,14 @@
     <script src="js/lastnames.js"></script>
     <script type="text/javascript">
     function more() {
-      var text = $('.d')[0].innerText;
-      var text2 = $('.d2')[0].innerText;
-      var texta = $('.da')[0].innerText;
-      var textb = $('.db')[0].innerText;
-      var textc = $('.dc')[0].innerText;
-      var textd = $('.dd')[0].innerText;
-      var texto = $('.o')[0].innerText;
-      var name = $('.n')[0].innerText;
+      var text = $($('.d')[0]).text();
+      var text2 = $($('.d2')[0]).text();
+      var texta = $($('.da')[0]).text();
+      var textb = $($('.db')[0]).text();
+      var textc = $($('.dc')[0]).text();
+      var textd = $($('.dd')[0]).text();
+      var texto = $($('.o')[0]).text();
+      var name = $($('.n')[0]).text();
       if (textb === 'article') {
         $('.db').text('disclosure');
       }
